@@ -12,8 +12,8 @@ function GalleryItem (props) {
     }
 
     const detailStyle = {
-        'width': '80vw',
-        'height': '20vh',
+        'width': '40vw',
+        'height': '30vh',
         'border': '1px solid black',
         'margin': '2px',
         'backgroundImage': `url(${props.item.artworkUrl100})`,
@@ -51,8 +51,12 @@ function GalleryItem (props) {
         )
     }
 
+    const container = {
+        'display': 'inline-block'
+    }
+
     return (
-        <div onClick={() => setView(!view)} style={{'display': 'inline-block'}}>
+        <div onClick={() => setView(!view)} style={container}>
             {view ? detailView() : simpleView()}
         </div>
     )

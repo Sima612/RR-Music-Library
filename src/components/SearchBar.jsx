@@ -7,10 +7,9 @@ function SearchBar () {
 
     return (
         <div>
-            <form>
+            <form className='mb-4'>
                 <input ref={term} type='text' placeholder='Search Here'
                 onChange={(e) => handleSearch(e, term.current.value)}/>
-                <input type='submit' />
             </form>
         </div>
     )
